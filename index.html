@@ -66,16 +66,16 @@
 
             urlgoat = "http://elserver122.42web.io/?i=1"
 
-            fetch(urlgoat)
-                
-                  .then(response => response.text())
-                  .then(data => {
-                    console.log('Contenido de URLserver.html:', data);
-                    // Aquí puedes procesar los datos recibidos, como extraer la URL
-                  })
-                  .catch(error => {
-                    console.error('Error al obtener datos:', error);
-                  });
+          fetch(urlgoat)
+              .then(response => response.text())
+              .then(data => {
+                console.log('Contenido de la URL:', data);
+                // Aquí puedes procesar los datos recibidos, como extraer la URL
+              })
+              .catch(error => {
+                console.log('Error al obtener datos:', error);
+              });
+
 
             poatan = data + "/uploadLink" 
 
