@@ -64,18 +64,30 @@
                 format: format
             };
 
-            urlgoat = "https://todosefueverdad101.onrender.com"
-
-            fetch(urlgoat)
+            urlgoat = "https://todosefueverdad101.onrender.com/uploadLink"
                 
-                .then(data => {
-                    console.log('Contenido de la URL:', data);
-                    // Aquí puedes procesar los datos recibidos, como extraer la URL
-                })
-                .catch(error => {
-                    console.log('Error al obtener datos:', error);
+            try {
+                
+                const response = await fetch(urlgoat , {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    mode: 'no-cors', // Modo no-cors para evitar problemas de CORS
+                    body: JSON.stringify(datos)
                 });
 
+                if (!response.ok) {
+                    throw new Error('Error al enviar los datos al servidor.');
+                }
+
+                const data = await response.json();
+
+                
+            } catch (error) {
+                console.error('Error:', error);
+               
+            }
 
             poatan = data + "/uploadLink" 
 
