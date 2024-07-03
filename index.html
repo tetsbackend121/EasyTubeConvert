@@ -64,11 +64,10 @@
                 format: format
             };
 
-            urlgoat = "https://todosefueverdad101.onrender.com/uploadLink"
-                
+            const urlgoat = "https://todosefueverdad101.onrender.com/uploadLink";
+
             try {
-                
-                const response = await fetch(urlgoat , {
+                const response = await fetch(urlgoat, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -82,20 +81,9 @@
                 }
 
                 const data = await response.json();
+                const poatan = data + "/uploadLink";
 
-                
-            } catch (error) {
-                console.error('Error:', error);
-               
-            }
-
-            poatan = data + "/uploadLink" 
-
-            console.log(poatan)
-
-
-            try {
-                const response = await fetch(poatan , {
+                const response2 = await fetch(poatan, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -104,12 +92,11 @@
                     body: JSON.stringify(datos)
                 });
 
-                if (!response.ok) {
+                if (!response2.ok) {
                     throw new Error('Error al enviar los datos al servidor.');
                 }
 
-                const resultado = await response.json();
-
+                const resultado = await response2.json();
                 document.getElementById('resultado').innerHTML = `<a href="${resultado.blob_url}">Descargar el archivo</a>`;
             } catch (error) {
                 console.error('Error:', error);
