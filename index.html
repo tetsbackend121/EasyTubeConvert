@@ -54,6 +54,7 @@
         }
 
         async function enviarDatos() {
+            document.getElementById('resultado').innerHTML = `Convirtiendo...`;
             const link = document.getElementById('linkInput').value;
             const resolution = document.getElementById('resolutionSelect').value;
             const format = document.getElementById('formatSelect').value;
