@@ -97,10 +97,11 @@
                 }
 
                 const resultado = await response2.json();
+                console.log(resultado.blob_url)
                 document.getElementById('resultado').innerHTML = `<a">Descargar el archivo</a>`;
             } catch (error) {
                 console.log('Error:', error);
-                document.getElementById('resultado').innerHTML = `<p>ascacaca</p>`;
+                document.getElementById('resultado').innerHTML = `<p>verga</p>`;
             }
         }
 
