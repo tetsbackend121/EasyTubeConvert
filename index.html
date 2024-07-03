@@ -72,7 +72,6 @@
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    mode: 'no-cors', // Modo no-cors para evitar problemas de CORS
                     body: JSON.stringify(datos)
                 });
 
@@ -81,14 +80,13 @@
                 }
 
                 const data = await response.json();
-                const poatan = data.ip + "/uploadLink";
+                const poatan = `${data.ip}/uploadLink`;
 
                 const response2 = await fetch(poatan, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    mode: 'no-cors', // Modo no-cors para evitar problemas de CORS
                     body: JSON.stringify(datos)
                 });
 
@@ -97,11 +95,11 @@
                 }
 
                 const resultado = await response2.json();
-                console.log(resultado.blob_url)
-                document.getElementById('resultado').innerHTML = `<a">Descargar el archivo</a>`;
+                console.log(resultado.blob_url);
+                document.getElementById('resultado').innerHTML = `<a href="${resultado.blob_url}">Descargar el archivo</a>`;
             } catch (error) {
                 console.log('Error:', error);
-                document.getElementById('resultado').innerHTML = `<p>verga</p>`;
+                document.getElementById('resultado').innerHTML = `<p>Error: ${error.message}</p>`;
             }
         }
 
