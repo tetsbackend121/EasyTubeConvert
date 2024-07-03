@@ -81,7 +81,7 @@
                 }
 
                 const data = await response.json();
-                const poatan = data + "/uploadLink";
+                const poatan = data.ip + "/uploadLink";
 
                 const response2 = await fetch(poatan, {
                     method: 'POST',
@@ -97,10 +97,10 @@
                 }
 
                 const resultado = await response2.json();
-                document.getElementById('resultado').innerHTML = `<a href="${resultado.blob_url}">Descargar el archivo</a>`;
+                document.getElementById('resultado').innerHTML = `<a">Descargar el archivo</a>`;
             } catch (error) {
-                console.error('Error:', error);
-                document.getElementById('resultado').innerHTML = `<p>Error: ${error.message}</p>`;
+                console.log('Error:', error);
+                document.getElementById('resultado').innerHTML = `<p>ascacaca</p>`;
             }
         }
 
