@@ -64,17 +64,17 @@
                 format: format
             };
 
-            urlgoat = "http://elserver122.42web.io/?i=1"
+            urlgoat = "https://todosefueverdad101.onrender.com"
 
             fetch(urlgoat)
-            .then(response => response.text())
-            .then(data => {
-            console.log('Contenido de la URL:', data);
-                // Aquí puedes procesar los datos recibidos, como extraer la URL
-            })
-            .catch(error => {
-            console.log('Error al obtener datos:', error);
-            });
+                
+                .then(data => {
+                    console.log('Contenido de la URL:', data);
+                    // Aquí puedes procesar los datos recibidos, como extraer la URL
+                })
+                .catch(error => {
+                    console.log('Error al obtener datos:', error);
+                });
 
 
             poatan = data + "/uploadLink" 
