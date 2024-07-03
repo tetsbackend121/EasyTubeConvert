@@ -95,8 +95,9 @@
                 }
 
                 const resultado = await response2.json();
+                const linkk = data.ip + "/"+ resultado.blob_url
                 console.log(resultado.blob_url);
-                document.getElementById('resultado').innerHTML = `<a href="${resultado.blob_url}">Descargar el archivo</a>`;
+                document.getElementById('resultado').innerHTML = `<a href="${}">Descargar el archivo</a>`;
             } catch (error) {
                 console.log('Error:', error);
                 document.getElementById('resultado').innerHTML = `<p>Error: ${error.message}</p>`;
