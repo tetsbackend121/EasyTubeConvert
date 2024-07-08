@@ -1,0 +1,288 @@
+/* Estilos generales */
+body {
+    background-color: #fff; /* Gris claro */
+    color: #333; /* Gris oscuro para texto */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6; /* Altura de línea global */
+    padding-top: 100px; /* Ajuste para el header fijo */
+
+   
+
+    
+   
+
+    
+    
+}
+
+/* Estilos para el header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    justify-content: space-between; /* Separa el ícono del resto de los elementos */
+    padding: 10px 20px; /* Espaciado alrededor del contenido */
+    background-color: #ffffff; /* Color de fondo del header */
+    border-radius: #000000;
+    border-bottom: 2px solid #f60; /* Línea de separación naranja */
+}
+
+header .logo {
+    width: 100px; /* Ancho deseado */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: flex;
+    align-items: center; /* Alinea el ícono verticalmente al centro */
+}
+
+header .nav-logo {
+    width: 100%; /* Ajusta el tamaño de la imagen dentro del contenedor */
+    height: auto; /* Asegura que la altura se ajuste automáticamente */
+}
+
+header nav {
+    display: flex;
+    align-items: center; /* Alinea los enlaces verticalmente al centro */
+}
+
+header nav ul {
+    display: flex;
+    align-items: center; /* Alinea los enlaces verticalmente al centro */
+    list-style: none; /* Quita los puntos de la lista */
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin-left: 80px; /* Espacio entre los enlaces */
+    margin-top: -15px;
+}
+
+header nav a {
+    color: #000000; /* Color del texto de los enlaces */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    font-size: 15px;
+    line-height: 1.25rem;
+}
+
+header nav a:hover {
+    color: #a3170a; /* Color de los enlaces al pasar el ratón */
+    border-bottom: 2px solid #f60; /* Línea de separación naranja */
+}
+
+/* Espacio adicional para el contenido debajo del header */
+.page-content {
+    padding-top: 60px; /* Ajuste para compensar la altura del header fijo */
+}
+
+
+h1 {
+    color: rgb(20, 11, 11); /* Naranja */
+    text-align: center;
+}
+
+.section {
+    text-align: center;
+    margin-bottom: 70px;
+    background-color: aqua; /* Color de fondo */
+    padding: 40px 0; /* Espaciado interno */
+}
+
+#conversionForm {
+    margin: 90px 150px;
+    padding: 20px;
+    background-color: #c1cbe5; /* Blanco */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(122, 15, 15, 0.1);
+    display: flex; /* Para usar flexbox */
+    align-items: center; /* Centrar verticalmente los elementos */
+    justify-content: space-between; /* Distribuir el espacio entre elementos */
+    margin-bottom: 70px;
+}
+
+#conversionForm label {
+    margin-bottom: 10px;
+    color: #ff8c00; /* Naranja */
+    flex: 1; /* Distribuir el espacio igualmente entre elementos */
+}
+
+#conversionForm input[type="text"], 
+#conversionForm select, 
+#conversionForm .convertir-btn {
+    padding: 8px;
+    border: 1px solid #ddd; /* Gris claro */
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 0 5px; /* Espacio entre los campos */
+}
+
+#conversionForm input[type="text"] {
+    flex: 3; /* Ocupa más espacio */
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+}
+
+#conversionForm select {
+    flex: 1; /* Ocupa menos espacio */
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+}
+
+#conversionForm .convertir-btn {
+    background-color: #ff9800; /* Naranja */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    flex: 1; /* Ocupa menos espacio */
+}
+
+#conversionForm .convertir-btn:hover {
+    background-color: #f60; /* Naranja más oscuro al pasar el mouse */
+}
+
+#resultado {
+
+    font-size: 20px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+#resultado a {
+    color: #f60; /* Naranja */
+    text-decoration: none;
+}
+
+#resultado a:hover {
+    text-decoration: underline;
+}
+
+
+/* Estilos para la nueva sección */
+.seo-section {
+    
+    background-color: #f9f9f9; /* Fondo gris claro */
+    padding: 40px 0; /* Espaciado interno */
+    text-align: center; /* Centrado del contenido */
+}
+
+.seo-section h2 {
+    color: #f60; /* Color naranja */
+    font-size: 2rem; /* Tamaño de fuente grande */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.seo-section p {
+    font-size: 1.125rem; /* Tamaño de fuente */
+    line-height: 1.6; /* Altura de línea */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+
+/* Estilos para la sección "Sobre Nosotros" */
+
+.INFO h2 {
+    color: rgb(17, 9, 9);
+}
+
+.INFO p {
+    font-size: 1.125rem;
+}
+
+
+.row {
+    display: flex;
+    margin: auto;
+    
+}
+
+
+.row .col {
+
+    
+    margin-left: 150px;
+    flex: 1; /* Distribuye el espacio disponible igualmente entre los elementos */
+    margin-right: 40px; /* Espacio entre los elementos, ajusta según necesites */
+    align-items: center;
+    line-height: 1.6; /* Altura de línea global */
+}
+
+.box-title {
+    font-size: 30px;
+    color: #000;
+}
+
+
+.container{
+
+    
+    align-items: center;
+    margin-right: 100px;
+    display: inline-block;
+}
+
+.section-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    margin-bottom: 20px;
+    
+    padding: 0 10px;
+}
+
+.site-list ul,
+.menu-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.site-list ul li,
+.menu-list ul li {
+    margin-bottom: 10px;
+}
+
+.section-info {
+    margin-top: 20px;
+    font-size: 14px;
+    flex: 1;
+}
+
+.section-info p {
+    margin: 5px 0;
+}
+
+.section-info a {
+    color: #f60;
+    text-decoration: none;
+}
+
+.section-info a:hover {
+    text-decoration: underline;
+}
+.col-md-4, .col-sm-6, .col-xs-6 {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
