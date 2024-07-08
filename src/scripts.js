@@ -6,7 +6,7 @@ document.getElementById('conversionForm').addEventListener('submit', function(ev
 async function enviarDatos() {
     document.getElementById('resultado').innerHTML = `Convirtiendo...`;
     const link = document.getElementById('linkInput').value;
-    const resolution = "360p";
+    const resolution = "360";
     const format = document.getElementById('formatSelect').value;
 
     const datos = {
